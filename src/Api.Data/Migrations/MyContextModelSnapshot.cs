@@ -45,7 +45,7 @@ namespace Data.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("User");
+                    b.ToTable("UserEntity");
                 });
 #pragma warning restore 612, 618
         }

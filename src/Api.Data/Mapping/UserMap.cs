@@ -8,7 +8,7 @@ namespace src.Api.Data.Mapping
   {
     public void Configure(EntityTypeBuilder<UserEntity> builder)
     {
-      builder.ToTable("User");
+      builder.ToTable("UserEntity");
 
       builder.Property(c => c.Name).IsRequired().HasMaxLength(60);
       builder.Property(c => c.Email).HasMaxLength(100);

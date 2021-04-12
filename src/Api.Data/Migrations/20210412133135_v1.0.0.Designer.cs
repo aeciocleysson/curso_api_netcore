@@ -10,7 +10,7 @@ using src.Api.Data.Context;
 namespace Data.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20210407135222_v1.0.0")]
+    [Migration("20210412133135_v1.0.0")]
     partial class v100
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,7 +47,7 @@ namespace Data.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("User");
+                    b.ToTable("UserEntity");
                 });
 #pragma warning restore 612, 618
         }

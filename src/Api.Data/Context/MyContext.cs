@@ -13,7 +13,7 @@ namespace src.Api.Data.Context
   {
     public MyContext(DbContextOptions<MyContext> options) : base(options) { }
 
-    public DbSet<UserEntity> Users { get; set; }
+    public DbSet<UserEntity> UserEntitys { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
