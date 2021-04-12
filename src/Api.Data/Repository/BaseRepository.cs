@@ -48,6 +48,30 @@ namespace src.Api.Data.Repository
       return item;
     }
 
+    public async Task<T> SelectAsync(Guid id)
+    {
+      try
+      {
+        return await _dataSet.SingleOrDefaultAsync(w => w.Id == id);
+      }
+      catch (Exception ex)
+      {
+        throw ex;
+      }
+    }
+
+    public async Task<IEnumerable<T>> SelectAsync()
+    {
+      try
+      {
+        return await _dataSet.ToListAsync();
+      }
+      catch (Exception ex)
+      {
+        throw ex;
+      }
+    }
+
     public async Task<T> UpdatetAsync(T item)
     {
       try
@@ -84,30 +108,6 @@ namespace src.Api.Data.Repository
         await _context.SaveChangesAsync();
 
         return true;
-      }
-      catch (Exception ex)
-      {
-        throw ex;
-      }
-    }
-
-    public async Task<T> SelectAsync(Guid id)
-    {
-      try
-      {
-        return await _dataSet.SingleOrDefaultAsync(w => w.Id == id);
-      }
-      catch (Exception ex)
-      {
-        throw ex;
-      }
-    }
-
-    public async Task<IEnumerable<T>> SelectAsync()
-    {
-      try
-      {
-        return await _dataSet.ToListAsync();
       }
       catch (Exception ex)
       {
