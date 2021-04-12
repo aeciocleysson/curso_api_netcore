@@ -13,7 +13,7 @@ namespace Api.CrossCutting.DependencyInjection
       serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
 
       serviceCollection.AddDbContext<MyContext>(options =>
-       options.UseNpgsql("Host=localhost;Database=dbApi;Username=postgres;Password=x;Timeout=300"));
+       options.UseNpgsql("Host=localhost;Database=DbAPI;Username=postgres;Password=x;Timeout=300"));
     }
   }
 }

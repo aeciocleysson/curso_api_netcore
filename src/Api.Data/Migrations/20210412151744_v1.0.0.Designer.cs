@@ -10,7 +10,7 @@ using src.Api.Data.Context;
 namespace Data.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20210412133135_v1.0.0")]
+    [Migration("20210412151744_v1.0.0")]
     partial class v100
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
