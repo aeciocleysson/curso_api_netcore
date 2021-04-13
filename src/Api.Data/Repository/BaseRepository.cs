@@ -11,11 +11,11 @@ namespace src.Api.Data.Repository
   /// <summary>
   /// Repository base que servira para quelquer entidade que persistira no banco
   /// </summary>
-  public class BaseRepository<T> : IRepository<T> where T : BaseEntity
+  public class BaseRepository<TModel> : IRepository<TModel> where TModel : BaseEntity
   {
     // variavel de somente leitura
     protected readonly MyContext _context;
-    private DbSet<T> _dataSet;
+    private DbSet<TModel> _dataSet;
 
     public BaseRepository(MyContext context)
     {
@@ -24,10 +24,10 @@ namespace src.Api.Data.Repository
       /// <summary>
       // variavel usada como atralho para o dataset
       /// </summary>
-      _dataSet = _context.Set<T>();
+      _dataSet = _context.Set<TModel>();
     }
 
-    public async Task<T> InsertAsync(T item)
+    public async Task<TModel> InsertAsync(TModel item)
     {
       try
       {
@@ -48,7 +48,7 @@ namespace src.Api.Data.Repository
       return item;
     }
 
-    public async Task<T> SelectAsync(Guid id)
+    public async Task<TModel> SelectAsync(Guid id)
     {
       try
       {
@@ -60,7 +60,7 @@ namespace src.Api.Data.Repository
       }
     }
 
-    public async Task<IEnumerable<T>> SelectAsync()
+    public async Task<IEnumerable<TModel>> SelectAsync()
     {
       try
       {
@@ -72,7 +72,7 @@ namespace src.Api.Data.Repository
       }
     }
 
-    public async Task<T> UpdatetAsync(T item)
+    public async Task<TModel> UpdatetAsync(TModel item)
     {
       try
       {
