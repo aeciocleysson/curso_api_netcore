@@ -1,5 +1,9 @@
 namespace src.Api.Domain.Entities
 {
+  /// <summary>
+  /// Exemplo de classe partial
+  /// é uma parte da classe UserEntity, e todos os atributos dessa classe fazem parte da UserEntity
+  /// </summary>
   public partial class UserEntity
   {
     public string Cpf { get; set; }
