@@ -12,5 +12,6 @@ namespace src.Api.Domain.Entities
     public string EnderecoBairro { get; set; }
     public string EnderecoCidade { get; set; }
     public string EnderecoEstado { get; set; }
+    public string EnderecoReferencia { get; set; }
   }
 }
