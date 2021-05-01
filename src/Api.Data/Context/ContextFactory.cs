@@ -12,7 +12,7 @@ namespace src.Api.Data.Context
     public MyContext CreateDbContext(string[] args)
     {
       // Usado para criar as Migrações
-      var connectionString = "Host=localhost;Database=DbAPI;Username=postgres;Password=x;Timeout=300";
+      var connectionString = "Host=localhost;Database=DbAPI;Username=postgres;Password=3103;Timeout=300";
       var optionsBuilder = new DbContextOptionsBuilder<MyContext>();
       optionsBuilder.UseNpgsql(connectionString);
 
